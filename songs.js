@@ -111,7 +111,7 @@ function renderSong(songID, playlists, activePlaylist) {
   if (songID === "default") {
     song = {
       id: "default",
-      image: "../Images/music-notes.svg",
+      image: "./Images/music-notes.svg",
       title: "",
       artist: "",
       duration: 0,
@@ -120,7 +120,7 @@ function renderSong(songID, playlists, activePlaylist) {
   } else if (songID === undefined) {
     song = {
       id: "default",
-      image: "../Images/music-notes.svg",
+      image: "./Images/music-notes.svg",
       title: "No songs added yet",
       artist: "",
       duration: 0,
