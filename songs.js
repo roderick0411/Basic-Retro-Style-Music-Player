@@ -111,7 +111,8 @@ function renderSong(songID, playlists, activePlaylist) {
   if (songID === "default") {
     song = {
       id: "default",
-      image: "./Images/music-notes.svg",
+      image:
+        "https://png.pngtree.com/png-clipart/20190924/original/pngtree-vector-music-notes-icon-png-image_4869091.jpg",
       title: "",
       artist: "",
       duration: 0,
@@ -120,7 +121,8 @@ function renderSong(songID, playlists, activePlaylist) {
   } else if (songID === undefined) {
     song = {
       id: "default",
-      image: "./Images/music-notes.svg",
+      image:
+        "https://png.pngtree.com/png-clipart/20190924/original/pngtree-vector-music-notes-icon-png-image_4869091.jpg",
       title: "No songs added yet",
       artist: "",
       duration: 0,
