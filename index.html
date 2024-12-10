@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CSS/main.css" />
+    <link rel="stylesheet" href="./CSS/all-songs.css" />
+    <link rel="stylesheet" href="./CSS/song-card.css" />
+    <link rel="stylesheet" href="./CSS/playlist.css" />
+    <title>MusicApp</title>
+  </head>
+  <body>
+    <div class="theme-div" data-theme="light">
+      <div class="icon-div">
+        <div class="icon-div-inside">
+          <img src="./Images/sun.svg" alt="" class="icon" />
+        </div>
+      </div>
+    </div>
+    <!-- <h1>Music Player</h1> -->
+    <main>
+      <div class="all-songs">
+        <div class="genre-filter"></div>
+      </div>
+      <div class="song-card"></div>
+      <div class="playlist">
+        <div class="create">
+          <button class="create-playlist">New Playlist</button>
+          <div class="input-bar hidden">
+            <input type="text" />
+            <button class="check">
+              <img src="./Images/check-mark.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="active-playlist hidden">
+          <div class="heading">Current Playlist</div>
+          <div class="playlist-name"></div>
+          <ul class="songs"></ul>
+        </div>
+        <div class="playlists">
+          <div class="heading">Playlists</div>
+          <ul class="playlists-list"></ul>
+        </div>
+        <button class="add-to-playlists hidden">
+          <span>Add</span>
+          <img src="./Images/add-to-list-light-theme.svg" alt="" />
+        </button>
+        <div class="added hidden">Added</div>
+      </div>
+    </main>
+  </body>
+  <script type="module" src="script.js" defer></script>
+</html>

@@ -1,0 +1,117 @@
+.song-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.song-card .thumbnail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    overflow: hidden;
+    padding: 1rem;
+    background-color: var(--quaternary-color);
+    border-radius: 1rem;
+    border: 1px solid black;
+}
+
+.song-card .thumbnail img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.song-card .thumbnail figcaption {
+    width: 100%;
+}
+
+.song-card .thumbnail figcaption .title {
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.song-card .thumbnail figcaption .artist {
+    font-size: 1.2rem;
+}
+
+/* ---------------Player----------------- */
+
+.song-card .player {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.song-card .player .controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 60%;
+    justify-content: space-around;
+    flex-shrink: 0;
+}
+
+.song-card .player .controls div:hover {
+    scale: 1.2;
+}
+
+.song-card .player .controls .previous, .song-card .player .controls .next {
+    width: 2rem;
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+
+.song-card .player .controls .play-pause {
+    width: 3rem;
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+
+.song-card .player .controls img {
+    width: 100%;
+}
+
+.song-card .player .progress-bar {
+    width: 300px;
+    height: 4px;
+    background-color: var(--color-background);
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-top: 1rem;
+    border: .5px solid rgba(0, 0, 0, 0.5);
+}
+
+.song-card .player .progress-bar::after {
+    content: "";
+    width: 8px;
+    border: 1px solid black;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+}
+
+.song-card .player .progress-bar .progress {
+    width: 0%;
+    height: 100%;
+    background-color: var(--color5);
+}
+
+.song-card .add-to-playlist {
+    border: none;
+    background-color: var(--color5);
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    border: 1px solid black;
+    transition: all .2s ease-out;
+}
+
+.song-card .add-to-playlist:hover {
+    transform: scale(1.2);
+}

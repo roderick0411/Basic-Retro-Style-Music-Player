@@ -1,0 +1,199 @@
+.playlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.playlist .create .create-playlist, .playlist .added {
+    background-color: var(--color5);
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    border: 1px solid black;
+    transition: all .2s ease-out;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.playlist .create .create-playlist:hover {
+    transform: scale(1.2);
+}
+
+.playlist .create .input-bar {
+    border-radius: .5rem;
+    background-color: var(--color-background);
+    display: flex;
+    align-items: center;
+    padding: 0rem .5rem;
+}
+
+.playlist .create .input-bar input {
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    background-color: transparent;
+}
+
+.playlist .create .input-bar input:focus {
+    outline: none;
+}
+
+.playlist .create .input-bar .check {
+    border: none;
+    background-color: transparent;
+}
+
+.playlist .create .input-bar .check img {
+    width: 1rem;
+    cursor: pointer;
+}
+
+.playlist[data-add-mode="true"] .create {
+    display: none;
+}
+
+.playlist .added {
+    pointer-events: none;
+    opacity: 1;
+    scale: 1.5;
+    transition: all .7s ease-in;
+    background-color: var(--tertiary-color);
+}
+
+.playlist .added.animate {
+    transform: translateY(-10rem);
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+}
+
+/* ------------Current Playlist--------------- */
+
+.playlist .current-playlist {
+    width: 100%;
+}
+
+.playlist .current-playlist .heading {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.playlist .current-playlist .playlist-name {
+    list-style: none;
+    margin: .5rem 0rem;
+    background-color: var(--color6);
+    padding: .5rem;
+    border: 1px solid black;
+    border-radius: .5rem;
+}
+
+/* ------------Active Playlist--------------- */
+
+.playlist .active-playlist {
+    width: 100%;
+}
+
+.playlist .active-playlist .heading {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.playlist .active-playlist .playlist-name {
+    background-color: var(--tertiary-color);
+    margin: .5rem 0rem;
+    padding: .5rem;
+    border: 1px solid black;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.playlist .active-playlist .songs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.playlist .active-playlist .songs li {
+    background-color: var(--secondary-color);
+    padding: .5rem;
+    border: 1px solid black;
+    border-radius: .5rem;
+    list-style: none;
+    font-size: .8rem;
+}
+
+/* ------------Playlists--------------- */
+
+.playlist .playlists {
+    width: 100%;
+}
+
+.playlist .playlists .heading {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.playlist .playlists .playlists-list li {
+    list-style: none;
+    margin: .5rem 0rem;
+    background-color: var(--secondary-color);
+    padding: .5rem;
+    border: 1px solid black;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.playlist .playlists .playlists-list li span {
+    pointer-events: none;
+}
+
+.playlist .playlists .playlists-list li:hover {
+    scale: 1.05;
+    font-weight: 500;
+}
+
+.playlist .playlists .playlists-list li .check-box {
+    width: 1rem;
+    aspect-ratio: 1;
+    background-color: aliceblue;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playlist .playlists .playlists-list li .check-box:has(img) {
+    border: none;
+}
+
+.playlist .playlists .playlists-list li .check-box img {
+    width: 1.2rem;
+    aspect-ratio: 1;
+}
+
+.playlist .add-to-playlists {
+    border: none;
+    background-color: var(--color5);
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    border: 1px solid black;
+    align-items: center;
+    cursor: pointer;
+}
+
+.playlist .add-to-playlists img{
+    width: 1.5rem;
+    margin-left: 1rem;
+}

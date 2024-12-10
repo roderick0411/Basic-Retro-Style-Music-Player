@@ -1,0 +1,98 @@
+/* ----------------Theme----------------- */
+
+:root {
+    --primary-color: #84DFFF;
+    --secondary-color: #EDD2F3;
+    --tertiary-color: #FFAF61;
+    --quaternary-color: #E5D4FF;
+    --color5: #FFAFAF;
+    --color-background: #f1f1f1;
+    --font-color: black;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    color: var(--font-color);
+}
+
+body {
+    background-color: var(--color-background);
+}
+
+/* --------------------------------------- */
+
+.theme-div {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content:flex-end;
+}
+
+.theme-div .icon-div {
+    display: flex;
+    width: 8rem;
+    border-radius: 3rem;
+    border: 2px solid var(--font-color);
+    background-color: var(--primary-color);
+    padding: .5rem;
+}
+
+.theme-div .icon-div .icon-div-inside {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-end;
+    transition: width .2s ease-out;
+    width: 3rem;
+}
+
+.theme-div .icon {
+    width: 3rem;
+    aspect-ratio: 1;
+    flex-grow: 0;
+    flex-shrink: 0;
+    cursor: pointer;
+    margin-right: 0;
+    transition: all .4s ease-out;
+}
+
+.theme-div[data-theme="dark"] .icon-div .icon-div-inside {
+    width: 100%;
+}
+
+.hidden {
+    display: none!important;
+}
+
+.notvisible {
+    opacity: 0!important;
+}
+
+body > h1 {
+    text-align: center;
+}
+
+main {
+    width: 80%;
+    min-width: 1000px;
+    margin: auto;
+    display: flex;
+    gap: 2rem;
+}
+
+main > div{
+    min-height: 100px;
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+}
+
+.all-songs, .playlist {
+    flex-basis: 30%;
+}
+
+.song-card {
+    flex-basis: 40%;
+}
+

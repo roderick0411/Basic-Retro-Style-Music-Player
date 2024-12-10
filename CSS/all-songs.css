@@ -1,0 +1,82 @@
+/* ---------------Genres Filter-------------------- */
+.all-songs {
+    padding: .5rem 1rem;
+}
+
+.all-songs .genre-filter {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.all-songs .genre-filter .dropdown-btn {
+    border: none;
+    background-color: var(--color5);
+    padding: .5rem 1rem;
+    position: relative;
+    z-index: 2;
+    border-radius: .4rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.all-songs .genre-filter .dropdown-btn:hover {
+    transform: scale(1.2);
+}
+
+.all-songs .genre-filter .genres-list {
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 105%;
+    opacity: 1;
+    background-color: var(--secondary-color);
+    transition: all .5s ease-out;
+    visibility: visible;
+    border: 1px solid black;
+    border-radius: .5rem;
+}
+
+.all-songs .genre-filter .genres-list li {
+    padding: .5rem;
+    margin: 0 1rem;
+    border-bottom: 1px solid black;
+    list-style: none;
+    cursor: pointer;
+}
+
+.all-songs .genre-filter .genres-list li:last-child {
+    border: none;
+}
+
+.all-songs .genre-filter:not(:has(.dropdown-btn:focus)) .genres-list {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* -------------------Songs List----------------------- */
+
+.all-songs .songs .genre-name {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.all-songs .songs .songs-list li {
+    list-style: none;
+    margin: .5rem 0rem;
+    background-color: var(--secondary-color);
+    padding: .5rem;
+    border: 1px solid black;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.all-songs .songs .songs-list li:hover {
+    scale: 1.05;
+    font-weight: 500;
+}
